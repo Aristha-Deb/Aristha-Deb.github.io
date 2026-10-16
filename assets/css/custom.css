@@ -1,11 +1,20 @@
-/* Give the site's prose blocks more room while keeping them centered. */
+/* Keep every page section on the same centered content grid. */
+:root {
+  --site-content-max-width: 84rem;
+  --site-content-gutter: 1.5rem;
+}
+
 .hbb-section > .max-w-prose {
-  width: 100%;
-  max-width: 84rem;
+  box-sizing: border-box;
+  width: min(var(--site-content-max-width), calc(100% - var(--site-content-gutter) - var(--site-content-gutter)));
+  max-width: var(--site-content-max-width);
+  margin-inline: auto;
+  padding-inline: 0 !important;
 }
 
 .hbb-section .prose {
-  max-width: 84rem;
+  width: 100%;
+  max-width: none;
 }
 
 /* Treat the lead image on each interior page as a wide, cropped banner. */
@@ -13,16 +22,8 @@
   padding-block: clamp(1rem, 3vw, 2rem) !important;
 }
 
-:is(#research-banner, #projects-banner, #academics-banner) > .max-w-prose {
-  width: 100%;
-  max-width: 84rem;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 :is(#research-banner, #projects-banner, #academics-banner) .prose {
-  width: 100%;
-  max-width: none;
+  margin-inline: 0;
 }
 
 :is(#research-banner, #projects-banner, #academics-banner) .prose figure,
@@ -60,12 +61,16 @@
   mask: url("/icons/book-open.svg") center / contain no-repeat;
 }
 
+.dark #section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child {
+  color: var(--color-primary-300);
+}
+
 /* Separate neighboring content blocks with a subtle, responsive rule. */
 .hbb-section.section-divider::after,
 .hbb-section:is(#research-banner, #projects-banner, #academics-banner)::after {
   content: "";
   display: block;
-  width: min(84rem, calc(100% - 3rem));
+  width: min(var(--site-content-max-width), calc(100% - var(--site-content-gutter) - var(--site-content-gutter)));
   height: 1px;
   margin: 2.5rem auto 0;
   background: color-mix(in srgb, currentColor 20%, transparent);
@@ -77,14 +82,41 @@
   }
 }
 
-/* Animated home background with mode-aware veils for readable text. */
+/* Present the home research CTA as a simple underlined text link. */
+#section-resume-biography-3 a.inline-flex.items-center.px-4.py-2 {
+  display: inline;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+#section-resume-biography-3 a.inline-flex.items-center.px-4.py-2 svg {
+  display: none;
+}
+
+/* Remove the pill treatment from research-interest labels. */
+#section-resume-biography-3 [class~="md:col-span-8"] [class*="rounded-full"] {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Animated home background with theme-aware veils for readable text. */
 #section-resume-biography-3 {
   background-color: #f5f1ed;
 }
 
 #section-resume-biography-3 > .home-section-bg {
   background-image:
-    linear-gradient(rgba(245, 241, 237, 0.78), rgba(245, 241, 237, 0.78)),
+    linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
     url('/images/turbulent-vector-field.webp') !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -97,7 +129,7 @@
 #section-resume-biography-3 p,
 #section-resume-biography-3 .text-gray-900,
 #section-resume-biography-3 .text-gray-800 {
-  color: #252323;
+  color: var(--color-neutral-950);
 }
 
 .dark #section-resume-biography-3 {
@@ -106,7 +138,7 @@
 
 .dark #section-resume-biography-3 > .home-section-bg {
   background-image:
-    linear-gradient(rgba(37, 35, 35, 0.82), rgba(37, 35, 35, 0.82)),
+    linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
     url('/images/turbulent-vector-field.webp') !important;
 }
 
@@ -116,6 +148,6 @@
 .dark #section-resume-biography-3 p,
 .dark #section-resume-biography-3 .text-gray-900,
 .dark #section-resume-biography-3 .text-gray-800 {
-  color: #f5f1ed;
+  color: var(--color-neutral-50);
 }
 

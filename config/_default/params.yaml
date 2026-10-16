@@ -34,7 +34,7 @@ hugoblox:
     # Mode: 'light', 'dark', or 'system' (follows OS preference)
     mode: system
     # Theme pack: name from data/themes/ or { light: "x", dark: "y" } for mix-and-match
-    pack: "default"
+    pack: "coffee"
     # Optional: Override theme pack colors
     colors:
       primary: "#70798C" # Slate
@@ -42,7 +42,10 @@ hugoblox:
       neutral: "#70798C" # Slate-based grays
     # Optional: Mode-specific color overrides
     colors_light: {}
-    colors_dark: {}
+    colors_dark:
+      primary: "#AEB7C8"
+      secondary: "#C5B9A8"
+      neutral: "#A3ACBC"
   # ────────────────────────────────────────────────────────────────────────────
   # TYPOGRAPHY
   # Font and text sizing
