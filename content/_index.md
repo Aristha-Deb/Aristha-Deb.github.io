@@ -19,7 +19,7 @@ sections:
       css_class: section-divider
       background:
         gradient_mesh:
-          enable: true
+          enable: false
       name:
         size: md
       avatar:

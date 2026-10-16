@@ -76,3 +76,31 @@
     height: clamp(10rem, 48vw, 15rem);
   }
 }
+
+/* Animated home background with the palette's ivory veil for contrast. */
+#section-resume-biography-3 {
+  background-color: #f5f1ed;
+}
+
+#section-resume-biography-3 > .home-section-bg {
+  background-image:
+    linear-gradient(rgba(245, 241, 237, 0.78), rgba(245, 241, 237, 0.78)),
+    url('/images/turbulent-vector-field.webp') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+}
+
+#section-resume-biography-3 h1,
+#section-resume-biography-3 h2,
+#section-resume-biography-3 h3,
+#section-resume-biography-3 p,
+#section-resume-biography-3 .text-gray-900,
+#section-resume-biography-3 .text-gray-800 {
+  color: #252323;
+}
+
+#section-resume-biography-3 a {
+  color: #70798c;
+}
+
