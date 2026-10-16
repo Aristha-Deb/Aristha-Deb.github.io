@@ -43,26 +43,9 @@
   object-position: center;
 }
 
-/* Replace the decorative sparkles beside Research Interests with an open book. */
-#section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child {
-  color: #70798c;
-}
-
-#section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child svg {
+/* Keep the About and Research Interests headings free of leading icons. */
+#section-resume-biography-3 .flex.items-center.gap-4.mb-8 > div:first-child {
   display: none;
-}
-
-#section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child::after {
-  content: "";
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: currentColor;
-  mask: url("/icons/book-open.svg") center / contain no-repeat;
-}
-
-.dark #section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child {
-  color: var(--color-primary-300);
 }
 
 /* Separate neighboring content blocks with a subtle, responsive rule. */
@@ -117,7 +100,7 @@
 #section-resume-biography-3 > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
-    url('/images/turbulent-vector-field.webp') !important;
+    url('/images/turbulence_4K_seamless.gif') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover !important;
@@ -139,7 +122,20 @@
 .dark #section-resume-biography-3 > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
-    url('/images/turbulent-vector-field.webp') !important;
+    url('/images/turbulence_4K_seamless.gif') !important;
+}
+
+/* Left-align coursework and tighten the vertical rhythm on Academics. */
+#coursework .prose {
+  text-align: left;
+}
+
+:is(#coursework, #teaching, #conferences, #service) {
+  padding-block: clamp(1.25rem, 2vw, 2rem) !important;
+}
+
+:is(#coursework, #teaching, #conferences, #service).section-divider::after {
+  margin-top: 1rem;
 }
 
 .dark #section-resume-biography-3 h1,

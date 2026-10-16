@@ -13,10 +13,6 @@ bio: >-
 affiliations:
   - name: Purdue University
     url: https://www.purdue.edu/
-links:
-  - icon: hero/academic-cap
-    url: https://math.purdue.edu/~qi117/personal.html
-    label: Dr. Di Qi
 interests:
   - Data assimilation
   - Plasma physics
