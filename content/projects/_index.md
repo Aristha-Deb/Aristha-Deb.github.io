@@ -11,7 +11,7 @@ sections:
       text: |-
         ![Sunset landscape from the original Projects page](images/source/projects-b.jpg)
     design:
-      css_class: section-divider
+      css_class: "page-banner section-divider"
       columns: "1"
   - block: markdown
     id: wasserstein-gan

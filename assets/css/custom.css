@@ -1,19 +1,44 @@
 /* Give the site's prose blocks more room while keeping them centered. */
 .blox-markdown > .max-w-prose {
   width: 100%;
-  max-width: 76rem;
+  max-width: 84rem;
 }
 
 .blox-markdown .prose {
-  max-width: 76rem;
+  max-width: 84rem;
+}
+
+/* Treat the lead image on each interior page as a wide, cropped banner. */
+.blox-markdown.page-banner > .max-w-prose {
+  max-width: 84rem;
+}
+
+.blox-markdown.page-banner .prose {
+  max-width: none;
+}
+
+.blox-markdown.page-banner .prose img {
+  display: block;
+  width: 100%;
+  height: clamp(12rem, 27vw, 23rem);
+  max-width: none;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Separate neighboring content blocks with a subtle, responsive rule. */
 .hbb-section.section-divider::after {
   content: "";
   display: block;
-  width: min(76rem, calc(100% - 3rem));
+  width: min(84rem, calc(100% - 3rem));
   height: 1px;
   margin: 2.5rem auto 0;
   background: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+@media (max-width: 640px) {
+  .blox-markdown.page-banner .prose img {
+    height: clamp(10rem, 48vw, 15rem);
+  }
 }

@@ -11,7 +11,7 @@ sections:
       text: |-
         ![Moon image from the original Research page](images/source/research-b.jpg)
     design:
-      css_class: section-divider
+      css_class: "page-banner section-divider"
       columns: "1"
   - block: markdown
     id: plasma-physics
