@@ -37,22 +37,22 @@ hugoblox:
     pack: "default"
     # Optional: Override theme pack colors
     colors:
-      primary: "" # Tailwind palette name or hex (e.g., "indigo" or "#6366f1")
-      secondary: ""
-      neutral: "" # Affects gray utilities (text-gray-*, bg-gray-*)
+      primary: "#70798C" # Slate
+      secondary: "#A99985" # Taupe
+      neutral: "#70798C" # Slate-based grays
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}
     # Optional: Semantic surface color overrides
     surfaces:
-      background: ""
-      foreground: ""
+      background: "#F5F1ED"
+      foreground: "#252323"
       header:
-        background: ""
-        foreground: ""
+        background: "#DAD2BC"
+        foreground: "#252323"
       footer:
-        background: ""
-        foreground: ""
+        background: "#DAD2BC"
+        foreground: "#252323"
 
   # ────────────────────────────────────────────────────────────────────────────
   # TYPOGRAPHY

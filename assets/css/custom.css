@@ -44,7 +44,7 @@
 
 /* Replace the decorative sparkles beside Research Interests with an open book. */
 #section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child {
-  color: rgb(79 70 229);
+  color: #70798c;
 }
 
 #section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child svg {
