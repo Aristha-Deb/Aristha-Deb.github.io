@@ -9,12 +9,12 @@ name:
 role: Ph.D. Student in Applied Mathematics
 bio: >-
   I am a Ph.D. student working in Applied Mathematics at Purdue University
-  under the supervision of [Dr. Di Qi](https://math.purdue.edu/~qi117/personal.html).
+  under the supervision of Dr. Di Qi.
 affiliations:
   - name: Purdue University
     url: https://www.purdue.edu/
 links:
-  - icon: hero/user-group
+  - icon: hero/academic-cap
     url: https://math.purdue.edu/~qi117/personal.html
     label: Dr. Di Qi
 interests:

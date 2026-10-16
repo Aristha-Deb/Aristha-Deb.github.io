@@ -11,7 +11,7 @@ sections:
       text: |-
         ![Landscape from the original Academics page](images/source/academics-banner.jpg)
     design:
-      css_class: "page-banner section-divider"
+      css_class: page-banner
       columns: "1"
   - block: markdown
     id: coursework

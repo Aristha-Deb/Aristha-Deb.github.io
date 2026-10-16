@@ -1,23 +1,38 @@
 /* Give the site's prose blocks more room while keeping them centered. */
-.blox-markdown > .max-w-prose {
+.hbb-section > .max-w-prose {
   width: 100%;
   max-width: 84rem;
 }
 
-.blox-markdown .prose {
+.hbb-section .prose {
   max-width: 84rem;
 }
 
 /* Treat the lead image on each interior page as a wide, cropped banner. */
-.blox-markdown.page-banner > .max-w-prose {
-  max-width: 84rem;
+:is(#research-banner, #projects-banner, #academics-banner) {
+  padding-block: clamp(1rem, 3vw, 2rem) !important;
 }
 
-.blox-markdown.page-banner .prose {
+:is(#research-banner, #projects-banner, #academics-banner) > .max-w-prose {
+  width: 100%;
+  max-width: 84rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+:is(#research-banner, #projects-banner, #academics-banner) .prose {
+  width: 100%;
   max-width: none;
 }
 
-.blox-markdown.page-banner .prose img {
+:is(#research-banner, #projects-banner, #academics-banner) .prose figure,
+:is(#research-banner, #projects-banner, #academics-banner) .prose figure > div,
+:is(#research-banner, #projects-banner, #academics-banner) .prose figure > div > div {
+  width: 100%;
+  margin: 0;
+}
+
+:is(#research-banner, #projects-banner, #academics-banner) .prose img {
   display: block;
   width: 100%;
   height: clamp(12rem, 27vw, 23rem);
@@ -27,8 +42,27 @@
   object-position: center;
 }
 
+/* Replace the decorative sparkles beside Research Interests with an open book. */
+#section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child {
+  color: rgb(79 70 229);
+}
+
+#section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child svg {
+  display: none;
+}
+
+#section-resume-biography-3 [class~="md:col-span-8"] > div:last-child > .flex.items-center.gap-4.mb-8 > div:first-child::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  mask: url("/icons/book-open.svg") center / contain no-repeat;
+}
+
 /* Separate neighboring content blocks with a subtle, responsive rule. */
-.hbb-section.section-divider::after {
+.hbb-section.section-divider::after,
+.hbb-section:is(#research-banner, #projects-banner, #academics-banner)::after {
   content: "";
   display: block;
   width: min(84rem, calc(100% - 3rem));
@@ -38,7 +72,7 @@
 }
 
 @media (max-width: 640px) {
-  .blox-markdown.page-banner .prose img {
+  :is(#research-banner, #projects-banner, #academics-banner) .prose img {
     height: clamp(10rem, 48vw, 15rem);
   }
 }
