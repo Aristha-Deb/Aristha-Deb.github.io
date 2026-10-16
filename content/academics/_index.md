@@ -11,6 +11,7 @@ sections:
       text: |-
         ![Landscape from the original Academics page](images/source/academics-banner.jpg)
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: coursework
@@ -32,6 +33,7 @@ sections:
         - MA 595 Computational Optimal Transport and Deep Generative Models
         - MA 595 Stochastic Calculus Methods in Machine Learning
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: teaching
@@ -52,6 +54,7 @@ sections:
         - **Summer 2026:** Research Assistant, Purdue University.
         - **Fall 2026:** MA 26100 (Calculus III), Recitation Instructor, Purdue University.
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: conferences
@@ -61,6 +64,7 @@ sections:
         - *Mathematics and Statistics in Industry: Workshop and Panel Discussion* (2025), Purdue University.
         - *Scientific Machine Learning: Theory, Algorithms, and Applications* (September 27–28, 2025), Purdue University.
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: service

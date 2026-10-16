@@ -1,0 +1,19 @@
+/* Give the site's prose blocks more room while keeping them centered. */
+.blox-markdown > .max-w-prose {
+  width: 100%;
+  max-width: 76rem;
+}
+
+.blox-markdown .prose {
+  max-width: 76rem;
+}
+
+/* Separate neighboring content blocks with a subtle, responsive rule. */
+.hbb-section.section-divider::after {
+  content: "";
+  display: block;
+  width: min(76rem, calc(100% - 3rem));
+  height: 1px;
+  margin: 2.5rem auto 0;
+  background: color-mix(in srgb, currentColor 20%, transparent);
+}

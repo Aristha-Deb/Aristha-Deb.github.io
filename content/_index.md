@@ -16,6 +16,7 @@ sections:
         education: ""
         interests: Research Interests
     design:
+      css_class: section-divider
       background:
         gradient_mesh:
           enable: true

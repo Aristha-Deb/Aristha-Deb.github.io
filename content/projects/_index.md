@@ -11,6 +11,7 @@ sections:
       text: |-
         ![Sunset landscape from the original Projects page](images/source/projects-b.jpg)
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: wasserstein-gan
@@ -19,10 +20,9 @@ sections:
       text: |-
         Designed and programmed a Wasserstein Generative Adversarial Network (WGAN) that trains from the MNIST dataset and maps Gaussian noise to realistic handwritten digits. PyTorch and NumPy were used with GPU-friendly integrations.
 
-        ![Generated handwritten digits from the original project page](images/source/projects-c.png)
-
-        ![WGAN training visualization from the original project page](images/source/projects-a.gif)
+        ![Generated handwritten digits from the WGAN project](images/source/projects-c.png)
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: neural-odes
@@ -30,6 +30,8 @@ sections:
       title: Neural ODEs for continuous optimal transport
       text: |-
         Implemented a neural ODE in Python to solve the well-known Benamou–Brenier optimal transport problem. The program uses an RK4 solver together with classic PyTorch packages. The Gaussian distribution is smoothly transported to the desired digit.
+
+        ![Animated optimal transport visualization from the Neural ODE project](images/source/projects-a.gif)
     design:
       columns: "1"
 ---

@@ -11,6 +11,7 @@ sections:
       text: |-
         ![Moon image from the original Research page](images/source/research-b.jpg)
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: plasma-physics
@@ -23,6 +24,7 @@ sections:
 
         **Reference:** Andrew J. Majda, Di Qi, and Antoine J. Cerfon. “A flux-balanced fluid model for collisional plasma edge turbulence: Model derivation and basic physical features.” *Physics of Plasmas* 25(10), 102307 (2018).
     design:
+      css_class: section-divider
       columns: "1"
   - block: markdown
     id: data-assimilation-control
