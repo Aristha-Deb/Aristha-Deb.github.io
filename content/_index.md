@@ -25,16 +25,4 @@ sections:
       avatar:
         size: medium
         shape: circle
-  - block: markdown
-    id: home-intro
-    content:
-      title: Welcome
-      text: |-
-        I am a Ph.D. student working in Applied Mathematics under [Dr. Di Qi](https://math.purdue.edu/~qi117/personal.html) at Purdue University.
-
-        My work includes data assimilation and plasma physics, data assimilation and control theory, and computational projects in optimal transport and generative modeling.
-
-        ![Mountain landscape from the original Google Site](images/source/home-banner.jpg)
-    design:
-      columns: "1"
 ---
