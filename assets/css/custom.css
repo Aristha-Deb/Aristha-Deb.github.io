@@ -90,6 +90,7 @@
 #home-skills {
   padding-block: 1rem !important;
   background-color: #f5f1ed;
+  border-top: 0 !important;
 }
 
 #home-skills > .home-section-bg {
@@ -108,10 +109,7 @@
   padding-inline: 0 !important;
 }
 
-#home-skills h2 {
-  width: 66.6667%;
-  margin-left: 33.3333%;
-  margin-top: 0;
+#home-skills .prose h3 {
   margin-bottom: 1rem !important;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -161,11 +159,6 @@
 }
 
 @media (max-width: 767px) {
-  #home-skills h2 {
-    width: 100%;
-    margin-left: 0;
-  }
-
   #home-skills .prose {
     width: 100%;
     margin-left: 0;

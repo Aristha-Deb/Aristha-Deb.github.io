@@ -27,8 +27,9 @@ sections:
   - block: markdown
     id: home-skills
     content:
-      title: Skills
       text: |-
+        ### Skills
+
         - Python
         - Machine learning
         - Stochastic filtering
