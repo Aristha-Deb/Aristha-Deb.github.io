@@ -83,6 +83,36 @@
   display: none;
 }
 
+#section-resume-biography-3 {
+  padding-bottom: 1rem !important;
+}
+
+#home-skills {
+  padding-top: 1rem !important;
+  padding-bottom: 2rem !important;
+}
+
+#home-skills .prose ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#home-skills .prose li {
+  margin: 0;
+}
+
+/* The source is 152px square; 251px renders it 65% larger. */
+#wasserstein-gan .prose img {
+  display: block;
+  width: 251px;
+  max-width: 100%;
+  margin: 1.5rem auto;
+}
+
 /* Remove the pill treatment from research-interest labels. */
 #section-resume-biography-3 [class~="md:col-span-8"] [class*="rounded-full"] {
   padding: 0 !important;

@@ -16,7 +16,6 @@ sections:
         education: ""
         interests: Research Interests
     design:
-      css_class: section-divider
       background:
         gradient_mesh:
           enable: false
@@ -25,4 +24,17 @@ sections:
       avatar:
         size: medium
         shape: circle
+  - block: markdown
+    id: home-skills
+    content:
+      title: Skills
+      text: |-
+        - Python
+        - Machine learning
+        - Stochastic filtering
+        - C++
+        - Matlab
+        - Data analytics
+    design:
+      columns: "1"
 ---
