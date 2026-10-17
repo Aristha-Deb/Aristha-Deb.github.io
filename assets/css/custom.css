@@ -90,6 +90,9 @@
 #home-skills {
   padding-block: 1rem !important;
   background-color: #f5f1ed;
+}
+
+#home-skills > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
     url('/images/turbulence_4K_seamless.gif');
@@ -105,11 +108,17 @@
   padding-inline: 0 !important;
 }
 
-#home-skills .prose h2 {
-  margin: 0 0 1rem;
+#home-skills .section-heading {
+  width: 66.6667%;
+  margin-left: 33.3333%;
+  margin-bottom: 1rem !important;
+  text-align: left;
+}
+
+#home-skills .section-heading h2 {
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-  text-align: left;
 }
 
 #home-skills .prose ul {
@@ -139,6 +148,9 @@
 
 .dark #home-skills {
   background-color: #252323;
+}
+
+.dark #home-skills > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
     url('/images/turbulence_4K_seamless.gif');
@@ -152,6 +164,11 @@
 }
 
 @media (max-width: 767px) {
+  #home-skills .section-heading {
+    width: 100%;
+    margin-left: 0;
+  }
+
   #home-skills .prose {
     width: 100%;
     margin-left: 0;
