@@ -108,17 +108,14 @@
   padding-inline: 0 !important;
 }
 
-#home-skills .section-heading {
+#home-skills h2 {
   width: 66.6667%;
   margin-left: 33.3333%;
+  margin-top: 0;
   margin-bottom: 1rem !important;
-  text-align: left;
-}
-
-#home-skills .section-heading h2 {
-  margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 #home-skills .prose ul {
@@ -164,7 +161,7 @@
 }
 
 @media (max-width: 767px) {
-  #home-skills .section-heading {
+  #home-skills h2 {
     width: 100%;
     margin-left: 0;
   }
