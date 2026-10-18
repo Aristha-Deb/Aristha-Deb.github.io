@@ -4,6 +4,11 @@
   --site-content-gutter: 1.5rem;
 }
 
+/* Remove the HugoBlox branding and template CTA from the site footer. */
+footer .powered-by {
+  display: none !important;
+}
+
 .hbb-section > .max-w-prose {
   box-sizing: border-box;
   width: min(var(--site-content-max-width), calc(100% - var(--site-content-gutter) - var(--site-content-gutter)));
