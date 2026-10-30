@@ -102,7 +102,7 @@ footer .powered-by {
 #home-skills > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
-    url('/images/turbulence_background.gif');
+    url('/images/turbulence_poster.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -154,7 +154,7 @@ footer .powered-by {
 .dark #home-skills > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
-    url('/images/turbulence_background.gif') !important;
+    url('/images/turbulence_poster.webp') !important;
 }
 
 .dark #home-skills h1,
@@ -196,7 +196,7 @@ footer .powered-by {
 #section-resume-biography-3 > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
-    url('/images/turbulence_background.gif') !important;
+    url('/images/turbulence_poster.webp') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover !important;
@@ -218,7 +218,27 @@ footer .powered-by {
 .dark #section-resume-biography-3 > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
-    url('/images/turbulence_background.gif') !important;
+    url('/images/turbulence_poster.webp') !important;
+}
+
+/* Use the poster until the high-detail animated video is ready. */
+#home-skills > .home-section-bg.has-background-video,
+#section-resume-biography-3 > .home-section-bg.has-background-video {
+  background-image: none !important;
+}
+
+.site-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.dark .site-background-video {
+  opacity: 0.18;
 }
 
 /* Left-align coursework and tighten the vertical rhythm on Academics. */

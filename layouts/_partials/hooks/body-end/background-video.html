@@ -1,0 +1,51 @@
+<script>
+  (() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const sectionIds = ['section-resume-biography-3', 'home-skills'];
+    const observedVideos = [];
+    for (const id of sectionIds) {
+      const section = document.getElementById(id);
+      const background = section?.querySelector('.home-section-bg');
+      if (!background || background.querySelector('.site-background-video')) continue;
+
+      const video = document.createElement('video');
+      video.className = 'site-background-video';
+      video.autoplay = true;
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      video.poster = '/images/turbulence_poster.webp';
+      video.setAttribute('aria-hidden', 'true');
+      video.tabIndex = -1;
+
+      background.append(video);
+      background.classList.add('has-background-video');
+      observedVideos.push(video);
+    }
+
+    const startVideo = (video) => {
+      if (!video.querySelector('source')) {
+        const source = document.createElement('source');
+        source.src = '/images/turbulence_background.mp4';
+        source.type = 'video/mp4';
+        video.append(source);
+        video.load();
+      }
+      video.play().catch(() => {});
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) startVideo(entry.target);
+          else entry.target.pause();
+        }
+      }, { rootMargin: '150px 0px' });
+      observedVideos.forEach((video) => observer.observe(video));
+    } else {
+      observedVideos.forEach(startVideo);
+    }
+  })();
+</script>
