@@ -102,7 +102,7 @@ footer .powered-by {
 #home-skills > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
-    url('/images/turbulence_4K_seamless.gif');
+    url('/images/turbulence_background.gif');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -154,7 +154,7 @@ footer .powered-by {
 .dark #home-skills > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
-    url('/images/turbulence_4K_seamless.gif');
+    url('/images/turbulence_background.gif') !important;
 }
 
 .dark #home-skills h1,
@@ -196,7 +196,7 @@ footer .powered-by {
 #section-resume-biography-3 > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-50) 80%, transparent), color-mix(in srgb, var(--color-neutral-50) 80%, transparent)),
-    url('/images/turbulence_4K_seamless.gif') !important;
+    url('/images/turbulence_background.gif') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover !important;
@@ -218,7 +218,7 @@ footer .powered-by {
 .dark #section-resume-biography-3 > .home-section-bg {
   background-image:
     linear-gradient(color-mix(in srgb, var(--color-neutral-950) 82%, transparent), color-mix(in srgb, var(--color-neutral-950) 82%, transparent)),
-    url('/images/turbulence_4K_seamless.gif') !important;
+    url('/images/turbulence_background.gif') !important;
 }
 
 /* Left-align coursework and tighten the vertical rhythm on Academics. */
